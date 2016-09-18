@@ -42,6 +42,7 @@
 			children = (
 				1ED8D76A1D8CA082007FD4C7 /* Battleship */,
 				1ED8D7691D8CA082007FD4C7 /* Products */,
+				2040878B1D8E0FA5000631E2 /* Supportu */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,14 +57,22 @@
 		1ED8D76A1D8CA082007FD4C7 /* Battleship */ = {
 			isa = PBXGroup;
 			children = (
-				1ED8D76B1D8CA082007FD4C7 /* AppDelegate.swift */,
 				1ED8D76D1D8CA082007FD4C7 /* FirstViewController.swift */,
 				1ED8D76F1D8CA082007FD4C7 /* SecondViewController.swift */,
 				1ED8D7711D8CA082007FD4C7 /* Main.storyboard */,
+			);
+			path = Battleship;
+			sourceTree = "<group>";
+		};
+		2040878B1D8E0FA5000631E2 /* Supportu */ = {
+			isa = PBXGroup;
+			children = (
+				1ED8D76B1D8CA082007FD4C7 /* AppDelegate.swift */,
 				1ED8D7741D8CA082007FD4C7 /* Assets.xcassets */,
 				1ED8D7761D8CA082007FD4C7 /* LaunchScreen.storyboard */,
 				1ED8D7791D8CA082007FD4C7 /* Info.plist */,
 			);
+			name = Supportu;
 			path = Battleship;
 			sourceTree = "<group>";
 		};
@@ -103,7 +112,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1ED8D7631D8CA082007FD4C7 /* Build configuration list for PBXProject "Battleship" */;
+			buildConfigurationList = 1ED8D7631D8CA082007FD4C7 /* Build configuration list for PBXProject "battleShip" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -287,7 +296,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1ED8D7631D8CA082007FD4C7 /* Build configuration list for PBXProject "Battleship" */ = {
+		1ED8D7631D8CA082007FD4C7 /* Build configuration list for PBXProject "battleShip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1ED8D77A1D8CA082007FD4C7 /* Debug */,
@@ -303,6 +312,7 @@
 				1ED8D77E1D8CA082007FD4C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
