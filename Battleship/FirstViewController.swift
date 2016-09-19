@@ -18,19 +18,19 @@ class FirstViewController: UIViewController {
     let engine: BattleShipEngine
     var loaded: Bool
     let resetTitle = "Reset"
-    let firstTenLetters = [ "A","B","C","D","E","F","G","H","I","J"]
     
-    func fieldAnnotations(letterNum: Int, inputArray: [String]) -> String {
-        let num = letterNum - 1 % 10
-        for eachLetter in inputArray {
-            
-            return eachLetter + String(num)
-            
-           
+    func fieldAnnotations() -> String {
+        let firstTenLetters = [ "A","B","C","D","E","F","G","H","I","J"]
+        
+        for eachLetter in firstTenLetters {
+            for i in 1...10 {
+                return eachLetter + String(i)
+            }
         }
         return "blah"
     }
 
+    
     //Initializes values for the ones above
     required init?(coder aDecoder: NSCoder) {
         self.howManyCards = 100
@@ -101,8 +101,9 @@ class FirstViewController: UIViewController {
             button.tag = i
             button.backgroundColor = UIColor.blue
             
-             let annotation = fieldAnnotations(letterNum: i,inputArray: firstTenLetters)
-            button.setTitle( annotation, for: UIControlState())
+            
+            button.setTitle( fieldAnnotations()
+                , for: UIControlState())
             button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
             v.addSubview(button)
         }
