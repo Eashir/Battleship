@@ -50,7 +50,7 @@ class BattleshipBrain {
     let rows: Int
     let columns: Int
 
-    private var coordinates: [[Coordinate]]
+    var coordinates: [[Coordinate]]
     
     init(rows: Int, columns: Int){
         self.rows = rows
@@ -65,7 +65,7 @@ class BattleshipBrain {
             self.coordinates.append([Coordinate](repeating: .empty(.hidden), count: columns))
             
             // this just sets one hit per column
-//            coordinates[r][Int(arc4random_uniform(UInt32(columns)))]
+//            coordinates[r][Int(arc4random_uniform(UInt32(columns)))] = Coordinate.occupied(.hidden, .carrier(5))
             
         }
     }

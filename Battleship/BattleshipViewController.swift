@@ -12,7 +12,7 @@ class BattleshipViewController: UIViewController {
     
     @IBOutlet weak var gridView: UIView!
     @IBOutlet weak var messageLabel: UILabel!
-    
+  
     let brain: BattleshipBrain
     
     required init?(coder aDecoder: NSCoder) {
@@ -51,6 +51,17 @@ class BattleshipViewController: UIViewController {
             messageLabel.text = "Keep guessing"
         }
     }
+
+    func computerGuesses() {
+        let r = Int(arc4random_uniform(UInt32(brain.rows)))
+        let c = Int(arc4random_uniform(UInt32(brain.columns)))
+    
+        
+            _ = brain.strike(atRow: r, andColumn: c)
+          drawBoard()
+        
+    }
+    
     
     func drawBoard() {
         for r in 0..<brain.rows {
@@ -119,5 +130,20 @@ class BattleshipViewController: UIViewController {
     @IBAction func resetTapped(_ sender: UIButton) {
         startGame()
     }
+    @IBAction func computerPlay(_ sender: UIButton) {
+        // arr[randomfunction]
+        
+        let r = Int(arc4random_uniform(UInt32(brain.rows)))
+        let c = Int(arc4random_uniform(UInt32(brain.columns)))
+        
+        
+        _ = brain.strike(atRow: r, andColumn: c)
+        drawBoard()
+        
+        
+    
+    
+    }
+    
 }
 

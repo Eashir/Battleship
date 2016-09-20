@@ -37,6 +37,14 @@
                                     <action selector="resetTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="KWc-P1-DeB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4P-n3-QzQ">
+                                <frame key="frameInset" minX="16" minY="575" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="computerPlay:" destination="9pv-A4-QxB" eventType="touchUpInside" id="abV-wq-mGt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
