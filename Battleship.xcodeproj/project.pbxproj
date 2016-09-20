@@ -44,6 +44,7 @@
 			children = (
 				1ED8D76A1D8CA082007FD4C7 /* Battleship */,
 				1ED8D7691D8CA082007FD4C7 /* Products */,
+				CC3D6CF21D904000004D1704 /* Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,15 +59,23 @@
 		1ED8D76A1D8CA082007FD4C7 /* Battleship */ = {
 			isa = PBXGroup;
 			children = (
-				1ED8D76B1D8CA082007FD4C7 /* AppDelegate.swift */,
 				1ED8D76D1D8CA082007FD4C7 /* BattleshipViewController.swift */,
-				1ED8D76F1D8CA082007FD4C7 /* SecondViewController.swift */,
 				1E906A691D8F0DF000851B7A /* BattleshipBrain.swift */,
 				1ED8D7711D8CA082007FD4C7 /* Main.storyboard */,
+				1ED8D76F1D8CA082007FD4C7 /* SecondViewController.swift */,
+			);
+			path = Battleship;
+			sourceTree = "<group>";
+		};
+		CC3D6CF21D904000004D1704 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1ED8D76B1D8CA082007FD4C7 /* AppDelegate.swift */,
 				1ED8D7741D8CA082007FD4C7 /* Assets.xcassets */,
 				1ED8D7761D8CA082007FD4C7 /* LaunchScreen.storyboard */,
 				1ED8D7791D8CA082007FD4C7 /* Info.plist */,
 			);
+			name = "Support Files";
 			path = Battleship;
 			sourceTree = "<group>";
 		};

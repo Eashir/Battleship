@@ -10,30 +10,39 @@
 import Foundation
 
 class BattleshipBrain {
-    enum Coordinate {
+    
+    enum Coordinate { //has 2 cases occupied & empty
+        
+        case occupied(State, Ship)
+        case empty(State)
+        
         enum Ship {
             case carrier(Int)
             case battleship(Int)
         }
+        
         enum State {
             case hidden, shown
         }
-        case occupied(State, Ship)
-        case empty(State)
+        
+       
         
         mutating func tryToHit() -> Bool {
+            
             switch self {
-            case .occupied(let state, let ship):
-                switch state {
-                case .hidden:
-                    self = Coordinate.occupied(.shown, ship)
-                    return true
-                case .shown:
-                    return true
+            
+                case .occupied(let state, let ship):
+                switch state { //switches State with 2 cases hidden & shown
+                    case .hidden:
+                        self = Coordinate.occupied(.shown, ship)
+                        return true
+                    case .shown:
+                        return true
                 }
-            case .empty:
-                self = Coordinate.empty(.shown)
-                return false
+                
+                case .empty:
+                    self = Coordinate.empty(.shown)
+                    return false
             }
         }
     }
@@ -52,12 +61,17 @@ class BattleshipBrain {
     
     
     func setupBoard() {
-        for r in 0..<rows {
+        for _ in 0..<rows {
             self.coordinates.append([Coordinate](repeating: .empty(.hidden), count: columns))
             
             // this just sets one hit per column
-            coordinates[r][Int(arc4random_uniform(UInt32(columns)))] = Coordinate.occupied(.hidden, .carrier(5))
+//            coordinates[r][Int(arc4random_uniform(UInt32(columns)))]
+            
         }
+    }
+    
+    func postCoordinates(r: Int, c: Int) {
+        self.coordinates[r][c] = Coordinate.occupied(.hidden, .carrier(5))
     }
     
     func resetBoard() {

@@ -34,11 +34,14 @@ class BattleshipViewController: UIViewController {
         let r = (sender.tag - 1) / brain.columns
         let c = (sender.tag - 1) % brain.columns
         
+        brain.postCoordinates(r: r, c: c)
+        sender.backgroundColor = .yellow
+        
         // note how the strike itself isn't updating the interface
-        _ = brain.strike(atRow: r, andColumn: c)
+//        _ = brain.strike(atRow: r, andColumn: c)
         
         // redraw the whole board
-        drawBoard()
+//        drawBoard()
         
         // check for win
         if brain.gameFinished() {
