@@ -50,7 +50,7 @@ class BattleshipBrain {
     let rows: Int
     let columns: Int
 
-    var coordinates: [[Coordinate]]
+    private var coordinates: [[Coordinate]]
     
     init(rows: Int, columns: Int){
         self.rows = rows
